@@ -21,7 +21,7 @@ export const siteConfig = {
 
   // 视频壁纸（可选）：留空 "" 则用上面的图片轮播；填 public/ 下的路径如 "/bg.mp4"（支持 .webm）
   // 注意：新增到 public/ 的文件需要 rebuild 后才会被服务器提供
-  bgVideo: "",
+  bgVideo: "/bg.mp4",
 
   // 4. 文章默认封面图
   defaultPostCover: "/me.png",
