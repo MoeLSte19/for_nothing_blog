@@ -10,11 +10,14 @@ export default function WindyGrass() {
   const { isDark } = useTheme();
 
   useEffect(() => {
-    const generated: WildBlade[] = Array.from({ length: 150 }).map((_, i) => ({
+    // 系统减少动效时跳过
+    if (typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
+
+    const generated: WildBlade[] = Array.from({ length: 80 }).map((_, i) => ({
       id: i, height: 30 + Math.random() * 50, width: 1 + Math.random() * 2,
       delay: Math.random() * -10, duration: 3 + Math.random() * 4,
       opacity: 0.2 + Math.random() * 0.4,
-      left: `${(i / 150) * 100 + (Math.random() - 0.5) * 0.5}%`,
+      left: `${(i / 80) * 100 + (Math.random() - 0.5) * 0.5}%`,
       isLeftCurve: Math.random() > 0.5
     }));
     setBlades(generated);

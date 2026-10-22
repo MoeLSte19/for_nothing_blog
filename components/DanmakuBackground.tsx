@@ -13,18 +13,18 @@ interface DanmakuItem {
 
 export default function DanmakuBackground() {
   const [danmakus, setDanmakus] = useState<DanmakuItem[]>([]);
+  const danmakuList = siteConfig.danmakuList || [];
 
   useEffect(() => {
-    const list = siteConfig.danmakuList || [];
-    if (list.length === 0) return;
+    if (danmakuList.length === 0) return;
 
     const generatedDanmakus: DanmakuItem[] = [];
-    const count = 15;
+    const count = 8;
 
     for (let i = 0; i < count; i++) {
       generatedDanmakus.push({
         id: i,
-        text: list[Math.floor(Math.random() * list.length)],
+        text: danmakuList[Math.floor(Math.random() * danmakuList.length)],
         // 现在容器本身只有 30vh 高，这里的 0-100% 就是在这个 30vh 内部随机
         // 我们留一点边距 10-90，防止字被切掉一半
         top: Math.random() * 80 + 10,
@@ -33,7 +33,9 @@ export default function DanmakuBackground() {
       });
     }
     setDanmakus(generatedDanmakus);
-  }, []);
+  }, [danmakuList]);
+
+  if (danmakuList.length === 0) return null;
 
   return (
     // 🌟 终极限制：去掉了 bottom-0，换成了 h-[30vh] 强制锁死容器高度！
