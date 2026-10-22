@@ -41,7 +41,7 @@ export default function SplashScreen() {
       {show && (
         <motion.div
           key="splash-screen-container"
-          exit={{ opacity: 0, scale: 1.1, filter: "blur(20px)" }}
+          exit={{ opacity: 0, scale: 1.1, filter: "blur(6px)" }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
           className="fixed inset-0 z-[100000] flex flex-col items-center justify-center bg-white dark:bg-slate-950"
         >

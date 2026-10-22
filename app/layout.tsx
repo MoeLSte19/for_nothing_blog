@@ -85,18 +85,17 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                 {/* 背景清晰度：雾层轻描淡染（原 backdrop-blur-md + 高不透明度会让背景发糊） */}
                 <div className="absolute inset-0 z-[-9] bg-white/10 dark:bg-slate-900/20 transition-colors duration-1000"></div>
 
+                {/* 色彩 wash 层：静态（去掉全屏渐变流动动画，视频壁纸下避免整屏每帧重复合成） */}
                 <div
-                  className="absolute inset-0 z-[-8] opacity-25 dark:opacity-10 mix-blend-color transition-opacity duration-1000 transform-gpu"
+                  className="absolute inset-0 z-[-8] opacity-25 dark:opacity-10 mix-blend-color transition-opacity duration-1000"
                   style={{
                     background: `linear-gradient(-45deg, ${siteConfig.themeColors.join(', ')})`,
-                    backgroundSize: '400% 400%',
-                    animation: 'gradientMove 15s ease infinite' // 🌟 全端保留渐变流动
                   }}
                 ></div>
 
-                {/* 👇 🌟 优化：手机端去掉了 mix-blend-overlay，但保留了 blur 模糊光晕，确保视觉不打折 */}
-                <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-white/40 dark:bg-indigo-900/20 blur-[100px] rounded-full z-[-7] md:mix-blend-overlay"></div>
-                <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-indigo-400/30 dark:bg-purple-900/30 blur-[100px] rounded-full z-[-7] md:mix-blend-overlay"></div>
+                {/* 装饰光晕：减小模糊半径、去掉 blend 叠加（壁纸模式下省合成开销） */}
+                <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-white/25 dark:bg-slate-900/10 blur-[60px] rounded-full z-[-7]"></div>
+                <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-indigo-400/20 dark:bg-slate-700/15 blur-[60px] rounded-full z-[-7]"></div>
 
                 {/* 隐藏手机端高负载粒子特效 */}
                 <div className="hidden md:block absolute inset-0 w-full h-full">
@@ -131,13 +130,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               </div>
             </div>
 
-            <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
-              @keyframes gradientMove { 
-                0% { background-position: 0% 50%; } 
-                50% { background-position: 100% 50%; } 
-                100% { background-position: 0% 50%; } 
-              }
-            `}} />
+            {/* gradientMove 动画已移除（性能优化：避免全屏背景层每帧合成） */}
           </MusicProvider>
 
           <div className="hidden md:block">
