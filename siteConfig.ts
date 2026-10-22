@@ -16,7 +16,7 @@ export const siteConfig = {
 
   // 3. 网站背景设置
   useGradient: false,
-  themeColors: ["#a18cd1", "#fbc2eb", "#a1c4fd", "#c2e9fb"],
+  themeColors: ["#262626", "#525252", "#a3a3a3", "#e5e5e5"],
   bgImages: ["https://bu.dusays.com/2026/03/24/69c1e38b4c370.jpg", "https://bu.dusays.com/2026/03/24/69c26fe4acdb5.jpg", "https://bu.dusays.com/2026/03/24/69c26fe4d9486.jpg"],
 
   // 视频壁纸（可选）：留空 "" 则用上面的图片轮播；填 public/ 下的路径如 "/bg.mp4"（支持 .webm）

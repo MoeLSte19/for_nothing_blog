@@ -10,8 +10,8 @@ export default function ThemeToggleBlock() {
     <div
       onClick={toggleTheme}
       // 【核心修复】：移除了定高限制 (h-[180px] md:h-auto)，换成了统一的 h-full w-full
-      className={`h-full w-full rounded-3xl backdrop-blur-md border shadow-xl p-6 flex flex-col justify-center items-center transition-all duration-500 hover:scale-[1.05] cursor-pointer group relative overflow-hidden
-        ${isDark ? 'bg-slate-800/40 border-slate-600/50' : 'bg-white/40 border-white/60'}
+      className={`h-full w-full rounded-3xl backdrop-blur-sm border shadow-xl p-6 flex flex-col justify-center items-center transition-all duration-500 hover:scale-[1.05] cursor-pointer group relative overflow-hidden
+        ${isDark ? 'bg-slate-800/30 border-slate-600/50' : 'bg-white/30 border-white/60'}
       `}
     >
        {/* 日夜交替动画图标 */}

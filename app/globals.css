@@ -1,5 +1,57 @@
 @import "tailwindcss";
 
+/* 黑白主色调：把原蓝紫（indigo/purple/pink/violet）色板重映射为中性灰，
+   全站 indigo/purple/pink 类一次性变成黑白灰（原来为蓝紫调） */
+@theme {
+  --color-indigo-50: #fafafa;
+  --color-indigo-100: #f5f5f5;
+  --color-indigo-200: #e5e5e5;
+  --color-indigo-300: #d4d4d4;
+  --color-indigo-400: #a3a3a3;
+  --color-indigo-500: #737373;
+  --color-indigo-600: #525252;
+  --color-indigo-700: #404040;
+  --color-indigo-800: #262626;
+  --color-indigo-900: #171717;
+  --color-indigo-950: #0a0a0a;
+
+  --color-purple-50: #fafafa;
+  --color-purple-100: #f5f5f5;
+  --color-purple-200: #e5e5e5;
+  --color-purple-300: #d4d4d4;
+  --color-purple-400: #a3a3a3;
+  --color-purple-500: #737373;
+  --color-purple-600: #525252;
+  --color-purple-700: #404040;
+  --color-purple-800: #262626;
+  --color-purple-900: #171717;
+  --color-purple-950: #0a0a0a;
+
+  --color-pink-50: #fafafa;
+  --color-pink-100: #f5f5f5;
+  --color-pink-200: #e5e5e5;
+  --color-pink-300: #d4d4d4;
+  --color-pink-400: #a3a3a3;
+  --color-pink-500: #737373;
+  --color-pink-600: #525252;
+  --color-pink-700: #404040;
+  --color-pink-800: #262626;
+  --color-pink-900: #171717;
+  --color-pink-950: #0a0a0a;
+
+  --color-violet-50: #fafafa;
+  --color-violet-100: #f5f5f5;
+  --color-violet-200: #e5e5e5;
+  --color-violet-300: #d4d4d4;
+  --color-violet-400: #a3a3a3;
+  --color-violet-500: #737373;
+  --color-violet-600: #525252;
+  --color-violet-700: #404040;
+  --color-violet-800: #262626;
+  --color-violet-900: #171717;
+  --color-violet-950: #0a0a0a;
+}
+
 /* 1. 声明暗黑模式变体 */
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -33,7 +85,7 @@
 
   [class*="backdrop-blur-"] {
     will-change: backdrop-filter;
-    -webkit-backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(4px);
   }
 
   .group:hover img {
@@ -47,7 +99,7 @@ input[type=range]::-webkit-slider-thumb {
   appearance: none;
   width: 12px; height: 12px;
   border-radius: 50%;
-  background: #6366f1;
+  background: #525252;
   cursor: pointer;
 }
 
@@ -59,7 +111,7 @@ input[type=range]::-webkit-slider-thumb {
 
   @-moz-document url-prefix() {
     [class*="backdrop-blur-md"] {
-      backdrop-filter: blur(8px) !important;
+      backdrop-filter: blur(4px) !important;
     }
   }
 
@@ -81,11 +133,11 @@ input[type=range]::-webkit-slider-thumb {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(99, 102, 241, 0.3);
+  background: rgba(82, 82, 82, 0.3);
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(99, 102, 241, 0.8);
+  background: rgba(82, 82, 82, 0.8);
 }
 
 /* ========================================================
@@ -93,5 +145,5 @@ input[type=range]::-webkit-slider-thumb {
    ======================================================== */
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(99, 102, 241, 0.3) transparent;
+  scrollbar-color: rgba(82, 82, 82, 0.3) transparent;
 }
