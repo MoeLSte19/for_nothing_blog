@@ -83,7 +83,7 @@ export default function CloudPlayer() {
   return (
     <>
       <style>{`
-        input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 12px; height: 12px; border-radius: 50%; background: #6366f1; cursor: pointer; transition: transform 0.1s; }
+        input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 12px; height: 12px; border-radius: 50%; background: #737373; cursor: pointer; transition: transform 0.1s; }
         input[type=range]::-webkit-slider-thumb:hover { transform: scale(1.3); }
         @keyframes safeWave { 0%, 100% { height: 4px; } 50% { height: 28px; } }
         .safe-wave { animation: safeWave 1s ease-in-out infinite; transform-origin: bottom; will-change: height; }
@@ -135,7 +135,7 @@ export default function CloudPlayer() {
               value={progress}
               onChange={safeHandleSeek}
               className="flex-1 h-1.5 bg-white/40 dark:bg-slate-700/50 rounded-full appearance-none outline-none cursor-pointer shadow-inner"
-              style={{ background: `linear-gradient(to right, #818cf8 ${progress}%, rgba(148,163,184,0.4) ${progress}%)` }}
+              style={{ background: `linear-gradient(to right, #a3a3a3 ${progress}%, rgba(148,163,184,0.4) ${progress}%)` }}
             />
             <span className="w-10">{formatTime(duration)}</span>
           </div>

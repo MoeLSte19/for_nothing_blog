@@ -68,7 +68,7 @@ export default function SplashScreen() {
                 initial={{ width: "0%" }}
                 animate={{ width: "100%" }}
                 transition={{ duration: 1.8, ease: "easeInOut" }}
-                className="absolute top-0 left-0 h-full bg-indigo-500 shadow-[0_0_12px_rgba(99,102,241,0.8)]"
+                className="absolute top-0 left-0 h-full bg-indigo-500 shadow-[0_0_12px_rgba(115,115,115,0.8)]"
               />
             </div>
           </div>

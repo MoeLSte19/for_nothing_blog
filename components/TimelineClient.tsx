@@ -184,8 +184,8 @@ export default function TimelineClient({ posts: initialPosts, tags }: { posts: a
           >
             <style dangerouslySetInnerHTML={{ __html: `
               .cyber-scrollbar::-webkit-scrollbar { width: 8px; md:width: 12px; }
-              .cyber-scrollbar::-webkit-scrollbar-track { background: rgba(99, 102, 241, 0.05); border-radius: 12px; margin-top: 20px; margin-bottom: 56px; }
-              .cyber-scrollbar::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #818cf8 0%, #c084fc 100%); border-radius: 12px; border: 2px solid transparent; background-clip: padding-box; }
+              .cyber-scrollbar::-webkit-scrollbar-track { background: rgba(115, 115, 115, 0.05); border-radius: 12px; margin-top: 20px; margin-bottom: 56px; }
+              .cyber-scrollbar::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #a3a3a3 0%, #c084fc 100%); border-radius: 12px; border: 2px solid transparent; background-clip: padding-box; }
               .fade-edges { -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%); }
             `}} />
 

@@ -48,14 +48,14 @@ export default function ClickEffect() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
         // 使用你主题里的靛蓝色，并带上动态透明度
-        ctx.strokeStyle = `rgba(129, 140, 248, ${this.opacity})`;
+        ctx.strokeStyle = `rgba(163, 163, 163, ${this.opacity})`;
         ctx.lineWidth = 2;
         ctx.stroke();
 
         // 内部再加一个极淡的实心圆，增加“触碰感”
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.r * 0.5, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(129, 140, 248, ${this.opacity * 0.3})`;
+        ctx.fillStyle = `rgba(163, 163, 163, ${this.opacity * 0.3})`;
         ctx.fill();
       }
     }
@@ -71,7 +71,7 @@ export default function ClickEffect() {
 
       // 增加全局模糊，让涟漪更有“云端”质感
       ctx.shadowBlur = 15;
-      ctx.shadowColor = 'rgba(129, 140, 248, 0.5)';
+      ctx.shadowColor = 'rgba(163, 163, 163, 0.5)';
 
       for (let i = 0; i < ripples.length; i++) {
         ripples[i].update();

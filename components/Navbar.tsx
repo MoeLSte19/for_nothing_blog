@@ -124,7 +124,7 @@ export default function Navbar() {
               setIsMobileMenuOpen(true);
             }
           }}
-          className={`fixed top-1/2 right-0 -translate-y-1/2 w-12 h-28 bg-indigo-500/80 backdrop-blur-xl rounded-l-full shadow-[-5px_0_20px_rgba(99,102,241,0.4)] z-[60] flex items-center justify-center transition-all duration-500 border-y border-l border-white/30 touch-none ${isMobileMenuOpen ? 'translate-x-full opacity-0 pointer-events-none' : 'translate-x-0 opacity-100'}`}
+          className={`fixed top-1/2 right-0 -translate-y-1/2 w-12 h-28 bg-indigo-500/80 backdrop-blur-xl rounded-l-full shadow-[-5px_0_20px_rgba(115,115,115,0.4)] z-[60] flex items-center justify-center transition-all duration-500 border-y border-l border-white/30 touch-none ${isMobileMenuOpen ? 'translate-x-full opacity-0 pointer-events-none' : 'translate-x-0 opacity-100'}`}
         >
           <div className="flex flex-col gap-1.5 items-center justify-center mr-2">
             <div className="w-1.5 h-1.5 bg-white/90 rounded-full"></div>
@@ -184,7 +184,7 @@ export default function Navbar() {
                             onClick={() => setIsMobileMenuOpen(false)}
                             className={`flex items-center justify-center w-full h-full rounded-full transition-all duration-300 ${
                               isActive 
-                                ? 'bg-indigo-500 text-white shadow-[0_0_15px_rgba(99,102,241,0.8)] scale-110' 
+                                ? 'bg-indigo-500 text-white shadow-[0_0_15px_rgba(115,115,115,0.8)] scale-110' 
                                 : 'bg-white/90 dark:bg-slate-800 text-slate-800 dark:text-slate-200 shadow-md hover:scale-110 border border-white/50 dark:border-slate-600'
                             }`}
                           >

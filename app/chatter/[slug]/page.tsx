@@ -191,10 +191,10 @@ export default async function ChatterDetail({ params }: { params: Promise<{ slug
                   .prose h3 { font-size: 1.2rem !important; font-weight: 700 !important; margin-bottom: 0.8rem !important; color: inherit !important; }
                   .prose p { font-size: 0.95rem !important; line-height: 1.75 !important; color: inherit !important; }
                   
-                  .prose a { color: #6366f1 !important; text-decoration: none !important; font-weight: 600 !important; border-bottom: 1px dashed #6366f1 !important; transition: all 0.3s ease !important; }
-                  .prose a:hover { color: #4f46e5 !important; border-bottom-style: solid !important; background-color: rgba(99, 102, 241, 0.1) !important; padding: 0 0.2rem !important; border-radius: 0.2rem !important; }
-                  .dark .prose a { color: #818cf8 !important; border-bottom-color: #818cf8 !important; }
-                  .dark .prose a:hover { color: #a5b4fc !important; background-color: rgba(129, 140, 248, 0.15) !important; }
+                  .prose a { color: #737373 !important; text-decoration: none !important; font-weight: 600 !important; border-bottom: 1px dashed #737373 !important; transition: all 0.3s ease !important; }
+                  .prose a:hover { color: #525252 !important; border-bottom-style: solid !important; background-color: rgba(115, 115, 115, 0.1) !important; padding: 0 0.2rem !important; border-radius: 0.2rem !important; }
+                  .dark .prose a { color: #a3a3a3 !important; border-bottom-color: #a3a3a3 !important; }
+                  .dark .prose a:hover { color: #d4d4d4 !important; background-color: rgba(163, 163, 163, 0.15) !important; }
 
                   .prose ul { list-style-type: disc !important; padding-left: 1.5rem !important; font-size: 0.95rem !important; }
                   .prose ol { list-style-type: decimal !important; padding-left: 1.5rem !important; font-size: 0.95rem !important; }
@@ -207,8 +207,8 @@ export default async function ChatterDetail({ params }: { params: Promise<{ slug
 
                   /* 🌟 引用块专属果冻极客风样式补丁 */
                   .prose blockquote {
-                    border-left: 4px solid #6366f1 !important;
-                    background-color: rgba(99, 102, 241, 0.05) !important;
+                    border-left: 4px solid #737373 !important;
+                    background-color: rgba(115, 115, 115, 0.05) !important;
                     padding: 1rem 1.5rem !important;
                     margin: 1.5rem 0 !important;
                     border-radius: 0 1.25rem 1.25rem 0 !important;
@@ -220,8 +220,8 @@ export default async function ChatterDetail({ params }: { params: Promise<{ slug
                     color: inherit !important;
                   }
                   .dark .prose blockquote {
-                    border-left-color: #818cf8 !important;
-                    background-color: rgba(129, 140, 248, 0.1) !important;
+                    border-left-color: #a3a3a3 !important;
+                    background-color: rgba(163, 163, 163, 0.1) !important;
                     color: #94a3b8 !important;
                   }
                   
@@ -244,8 +244,8 @@ export default async function ChatterDetail({ params }: { params: Promise<{ slug
                   }
                   
                   .prose code::before, .prose code::after { content: none !important; }
-                  .prose p code, .prose li code { background-color: rgba(99, 102, 241, 0.1) !important; color: #6366f1 !important; padding: 0.1rem 0.3rem !important; border-radius: 0.25rem !important; font-weight: 600 !important; font-size: 0.85em !important; }
-                  .dark .prose p code, .dark .prose li code { background-color: rgba(99, 102, 241, 0.2) !important; color: #818cf8 !important; }
+                  .prose p code, .prose li code { background-color: rgba(115, 115, 115, 0.1) !important; color: #737373 !important; padding: 0.1rem 0.3rem !important; border-radius: 0.25rem !important; font-weight: 600 !important; font-size: 0.85em !important; }
+                  .dark .prose p code, .dark .prose li code { background-color: rgba(115, 115, 115, 0.2) !important; color: #a3a3a3 !important; }
                   .prose img { display: block !important; margin: 1.5rem auto !important; border-radius: 1rem !important; box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important; max-width: 100% !important; height: auto !important; }
 
                   .prose pre code .hljs-comment, .prose pre code .hljs-quote { color: #5c6370 !important; font-style: italic !important; }

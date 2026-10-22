@@ -64,8 +64,8 @@ export default function Comments() {
         }
         .custom-gitalk-glass .gt-container .gt-header-textarea:focus {
           background: rgba(255, 255, 255, 0.2) !important;
-          border-color: #6366f1 !important; /* Indigo 500 */
-          box-shadow: 0 0 15px rgba(99, 102, 241, 0.3) !important;
+          border-color: #737373 !important; /* Indigo 500 */
+          box-shadow: 0 0 15px rgba(115, 115, 115, 0.3) !important;
         }
         .custom-gitalk-glass .gt-container .gt-header-preview {
           background: rgba(255, 255, 255, 0.1) !important;
@@ -73,16 +73,16 @@ export default function Comments() {
           border-radius: 16px !important;
         }
         .custom-gitalk-glass .gt-container .gt-btn {
-          background: #6366f1 !important;
+          background: #737373 !important;
           border: none !important;
           border-radius: 12px !important;
-          box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4) !important;
+          box-shadow: 0 4px 15px rgba(115, 115, 115, 0.4) !important;
           transition: transform 0.2s, box-shadow 0.2s;
           color: white !important;
         }
         .custom-gitalk-glass .gt-container .gt-btn:hover {
           transform: translateY(-2px);
-          box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6) !important;
+          box-shadow: 0 6px 20px rgba(115, 115, 115, 0.6) !important;
         }
         .custom-gitalk-glass .gt-container .gt-comment-content {
           background: rgba(255, 255, 255, 0.05) !important;
@@ -91,7 +91,7 @@ export default function Comments() {
           border-radius: 16px !important;
         }
         .custom-gitalk-glass .gt-container .gt-comment-admin .gt-comment-content {
-          border-color: rgba(99, 102, 241, 0.3) !important;
+          border-color: rgba(115, 115, 115, 0.3) !important;
         }
         .custom-gitalk-glass .gt-container .gt-avatar {
           border-radius: 50% !important;
@@ -101,7 +101,7 @@ export default function Comments() {
           color: inherit !important;
         }
         .custom-gitalk-glass .gt-container a {
-          color: #6366f1 !important;
+          color: #737373 !important;
         }
       `}</style>
     </div>

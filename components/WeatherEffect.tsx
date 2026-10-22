@@ -38,7 +38,7 @@ export default function WeatherEffect() {
         /* 暗黑模式下的发光特效 */
         .dark .cyber-particle {
            background: rgba(165, 180, 252, 0.8);
-           box-shadow: 0 0 10px 2px rgba(99, 102, 241, 0.3);
+           box-shadow: 0 0 10px 2px rgba(115, 115, 115, 0.3);
         }
       `}</style>
       {particles.map((p) => (

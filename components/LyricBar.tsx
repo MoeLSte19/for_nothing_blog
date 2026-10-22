@@ -78,9 +78,9 @@ export default function LyricBar() {
 
         {/* 2. 歌词显示区 */}
         <div className="flex-1 px-8 flex justify-center items-center overflow-hidden">
-          <p className="text-white text-lg font-bold tracking-widest truncate drop-shadow-[0_0_8px_rgba(99,102,241,0.8)]">
+          <p className="text-white text-lg font-bold tracking-widest truncate drop-shadow-[0_0_8px_rgba(115,115,115,0.8)]">
             {displayedLyric}
-            <span className="inline-block w-[3px] h-5 bg-indigo-400 align-middle ml-1 shadow-[0_0_8px_rgba(99,102,241,0.8)] animate-cursor"></span>
+            <span className="inline-block w-[3px] h-5 bg-indigo-400 align-middle ml-1 shadow-[0_0_8px_rgba(115,115,115,0.8)] animate-cursor"></span>
           </p>
         </div>
 

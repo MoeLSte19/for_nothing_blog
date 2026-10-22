@@ -67,7 +67,7 @@ export default function CreativeWorkshopClient({ posts = [], chatters = [], mome
 
       // 5. 打印高度拟真化的控制台干员档案
       console.groupCollapsed(`[数据同步]`);
-      console.log(`%c[当前等级] Lv.${level}`, 'color: #6366f1; font-weight: 900; font-size: 16px; text-shadow: 0 0 4px rgba(99,102,241,0.3);');
+      console.log(`%c[当前等级] Lv.${level}`, 'color: #737373; font-weight: 900; font-size: 16px; text-shadow: 0 0 4px rgba(115,115,115,0.3);');
       console.log(`%c[升级进度] ${remainingExp} / ${expNeededForNextLevel} EXP (${progressPercent}%)`, 'color: #10b981; font-weight: bold;');
       console.log(`[总计累计] ${totalExp} EXP`);
       console.log(`%c[渐近公式] EXP_Next = 150 + Math.floor((2000 * (L-1)) / ((L-1) + 10)) [极限上限: 2150]`, 'color: #8b5cf6; font-style: italic;');
