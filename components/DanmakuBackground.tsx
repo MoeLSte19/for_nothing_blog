@@ -19,7 +19,7 @@ export default function DanmakuBackground() {
     if (danmakuList.length === 0) return;
 
     const generatedDanmakus: DanmakuItem[] = [];
-    const count = 8;
+    const count = 12;
 
     for (let i = 0; i < count; i++) {
       generatedDanmakus.push({

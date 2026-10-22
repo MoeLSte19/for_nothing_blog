@@ -85,17 +85,18 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                 {/* 背景清晰度：雾层轻描淡染（原 backdrop-blur-md + 高不透明度会让背景发糊） */}
                 <div className="absolute inset-0 z-[-9] bg-white/10 dark:bg-slate-900/20 transition-colors duration-1000"></div>
 
-                {/* 色彩 wash 层：静态（去掉全屏渐变流动动画，视频壁纸下避免整屏每帧重复合成） */}
+                {/* 色彩 wash 层：只做低成本透明度呼吸（不动 background-position，避免整屏反复合成） */}
                 <div
-                  className="absolute inset-0 z-[-8] opacity-25 dark:opacity-10 mix-blend-color transition-opacity duration-1000"
+                  className="absolute inset-0 z-[-8] opacity-30 dark:opacity-15 mix-blend-color"
                   style={{
                     background: `linear-gradient(-45deg, ${siteConfig.themeColors.join(', ')})`,
+                    animation: 'washBreathe 8s ease-in-out infinite',
                   }}
                 ></div>
 
-                {/* 装饰光晕：减小模糊半径、去掉 blend 叠加（壁纸模式下省合成开销） */}
-                <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-white/25 dark:bg-slate-900/10 blur-[60px] rounded-full z-[-7]"></div>
-                <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-indigo-400/20 dark:bg-slate-700/15 blur-[60px] rounded-full z-[-7]"></div>
+                {/* 装饰光晕：中等模糊 + 轻 blend-free 光晕（视频壁纸下保持省合成） */}
+                <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-white/30 dark:bg-slate-800/15 blur-[80px] rounded-full z-[-7]"></div>
+                <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-indigo-400/25 dark:bg-slate-600/20 blur-[80px] rounded-full z-[-7]"></div>
 
                 {/* 隐藏手机端高负载粒子特效 */}
                 <div className="hidden md:block absolute inset-0 w-full h-full">
@@ -130,7 +131,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               </div>
             </div>
 
-            {/* gradientMove 动画已移除（性能优化：避免全屏背景层每帧合成） */}
+            <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
+              @keyframes washBreathe { 0%,100% { opacity: 0.15; } 50% { opacity: 0.4; } }
+            `}} />
           </MusicProvider>
 
           <div className="hidden md:block">

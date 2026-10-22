@@ -22,12 +22,12 @@ export default function Fireflies() {
     // 低性能偏好/系统级减少动效时直接不渲染
     if (typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
 
-    const generated: Firefly[] = Array.from({ length: 30 }).map((_, i) => ({
+    const generated: Firefly[] = Array.from({ length: 40 }).map((_, i) => ({
       id: i,
       // 初始出生点
       top: `${Math.random() * 100}%`,
       left: `${Math.random() * 100}%`,
-      size: 3 + Math.random() * 4,
+      size: 3.5 + Math.random() * 4.5,
 
       // 呼吸闪烁：较快，3 到 8 秒一个来回
       breatheDuration: 3 + Math.random() * 5,
@@ -103,7 +103,7 @@ export default function Fireflies() {
               height: `${fly.size}px`,
               backgroundColor: 'rgba(200, 255, 200, 0.9)',
               // 静态光晕（避免关键帧里逐帧改 box-shadow 引发重绘）
-              boxShadow: '0 0 10px 3px rgba(100, 255, 150, 0.3)',
+              boxShadow: '0 0 12px 4px rgba(100, 255, 150, 0.45)',
               animation: `fireflyBreathe ${fly.breatheDuration}s ease-in-out infinite`,
               animationDelay: `${fly.breatheDelay}s`,
             }}

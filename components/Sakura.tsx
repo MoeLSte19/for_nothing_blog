@@ -16,7 +16,7 @@ export default function Sakura() {
     // 系统减少动效时跳过
     if (typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
 
-    const generated = Array.from({ length: 24 }).map((_, i) => ({
+    const generated = Array.from({ length: 34 }).map((_, i) => ({
       id: i,
       left: `${Math.random() * 100}%`,
       size: 8 + Math.random() * 12, // 8px 到 20px 大小的花瓣
